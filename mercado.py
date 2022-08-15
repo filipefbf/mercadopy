@@ -1,16 +1,40 @@
-# This is a sample Python script.
+from typing import List, Dict
+from time import sleep
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from models.produto import Produto
+from utils.helper import formata_float_str_moeda
+
+produtos: List[Produto] = []
+carrinho: List[Dict[Produto, int]] = []
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main() -> None:
+    menu()
 
 
-# Press the green button in the gutter to run the script.
+def menu() -> None:
+    pass
+
+
+def cadastrar_produto() -> None:
+    pass
+
+
+def listar_produtos() -> None:
+    pass
+
+
+def visualizar_carrinho() -> None:
+    pass
+
+
+def fechar_pedido() -> None:
+    pass
+
+
+def pega_produto_por_codigo() -> None:
+    pass
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
