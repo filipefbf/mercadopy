@@ -52,14 +52,14 @@ def cadastrar_produto() -> None:
     print('Cadastro de produto')
     print('===================')
 
-    nome: str = input('Informe o nome do produto')
-    preco: float = float(input('Informe o nome do produto'))
+    nome: str = input('Informe o nome do produto: ')
+    preco: float = float(input('Informe o preço do produto: '))
 
     produto: Produto = Produto(nome, preco)
 
     produtos.append(produto)
 
-    print(f'O produto {produto.nome} foi cadastrado com sucesso')
+    print(f'O produto {produto.nome} foi cadastrado com sucesso!')
     sleep(2)
     menu()
 
@@ -69,9 +69,9 @@ def listar_produtos() -> None:
         print('Listagem de produtos')
         print('--------------------')
         for produto in produtos:
-            print(produtos)
+            print(produto)
             print('--------------------')
-            sleep()
+            sleep(1)
     else:
         print('Ainda não existem produtos cadastrados')
     sleep(2)
@@ -89,7 +89,7 @@ def comprar_produto() -> None:
             sleep(1)
         codigo: int = int(input())
 
-        produto: Produto = pega_produto_por_codigo()
+        produto: Produto = pega_produto_por_codigo(codigo)
 
         if produto:
             if len(carrinho) > 0:
